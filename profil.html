@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Moosic</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+    <link
+      rel="stylesheet"
+      href="style-profil.css"
+      type="text/css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="icon"
+      href="https://cdn.glitch.com/635f7807-931c-4359-955f-e5a30b567eb1%2Ficon.ico?v=1622468860944"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="player player-off case">
+        <img
+          src="https://cdn.glitch.com/635f7807-931c-4359-955f-e5a30b567eb1%2Fscale.svg?v=1622734351210"
+          id="logo-hover"
+        />
+        <img src="" id="logo-player" />
+      </div>
+      <nav>
+        <svg
+          id="menu-burger"
+          width="45"
+          height="45"
+          viewBox="0 0 384 384"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g id="menu1">
+            <path
+              id="BARRE-BAS"
+              d="M368 289H16C7.16797 289 0 277.352 0 263C0 248.648 7.16797 237 16 237H368C376.832 237 384 248.648 384 263C384 277.352 376.832 289 368 289Z"
+              fill="#FFFFFF"
+            />
+            <path
+              id="BARRE-MILLIEU"
+              d="M368 197H16C7.16797 197 0 185.352 0 171C0 156.648 7.16797 145 16 145H368C376.832 145 384 156.648 384 171C384 185.352 376.832 197 368 197Z"
+              fill="#FFFFFF"
+            />
+            <path
+              id="BARRE-HAUT"
+              d="M368 105H16C7.16797 105 0 93.3521 0 79C0 64.6479 7.16797 53 16 53H368C376.832 53 384 64.6479 384 79C384 93.3521 376.832 105 368 105Z"
+              fill="#FFFFFF"
+            />
+          </g>
+        </svg>
+        <ul>
+          <li>
+            <a href="https://moosic-app.glitch.me/accueil.html">Accueil</a>
+          </li>
+          <li>
+            <a href="https://moosic-app.glitch.me/rechercher.html"
+              >Rechercher</a
+            >
+          </li>
+          <li>
+            <a href="https://moosic-app.glitch.me/decouvrir.html">Découvrir</a>
+          </li>
+          <li>
+            <a href="https://moosic-app.glitch.me/mon-mood.html">Mon mood</a>
+          </li>
+          <li>
+            <a href="https://moosic-app.glitch.me/bibliotheque.html"
+              >Bibliothèque</a
+            >
+          </li>
+        </ul>
+        <div class="profil">
+          <div class="profil-name">
+            <a href="https://moosic-app.glitch.me/profil.html"
+              ><svg
+                width="67"
+                height="78"
+                viewbox="0 0 67 78"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="33.5"
+                  cy="44.5"
+                  r="32"
+                  stroke="#00FFA3"
+                  stroke-width="3"
+                />
+                <path
+                  d="M33.4996 35.2498C36.0538 35.2498 38.1245 33.1792 38.1245 30.6249C38.1245 28.0706 36.0538 26 33.4996 26C30.9453 26 28.8746 28.0706 28.8746 30.6249C28.8746 33.1792 30.9453 35.2498 33.4996 35.2498Z"
+                  fill="white"
+                />
+                <path
+                  d="M42.4887 59.6542L36.7931 61.7902L39.6255 62.8524C40.8444 63.305 42.1597 62.6779 42.6029 61.4986C42.8389 60.8694 42.7691 60.2104 42.4887 59.6542Z"
+                  fill="white"
+                />
+                <path
+                  d="M22.7497 51.5837C21.5562 51.1411 20.2216 51.7418 19.7722 52.9375C19.324 54.1332 19.9303 55.4656 21.126 55.9149L23.6208 56.8504L30.2073 54.3802L22.7497 51.5837Z"
+                  fill="white"
+                />
+                <path
+                  d="M47.2276 52.9376C46.7782 51.7418 45.4436 51.1411 44.2502 51.5838L25.7506 58.5212C24.5548 58.9706 23.9485 60.3029 24.3967 61.4987C24.8399 62.6775 26.1549 63.3052 27.3742 62.8524L45.8738 55.9151C47.0697 55.4657 47.676 54.1334 47.2276 52.9376Z"
+                  fill="white"
+                />
+                <path
+                  d="M49.6871 44.4997H44.1792L40.1934 36.528C39.7792 35.7004 38.9366 35.2289 38.0682 35.2499H33.4999H28.9314C28.0631 35.2289 27.2216 35.7005 26.8065 36.528L22.8206 44.4997H17.3128C16.0358 44.4997 15.0004 45.5351 15.0004 46.8121C15.0004 48.0891 16.0358 49.1245 17.3128 49.1245H24.2501C25.1264 49.1245 25.9269 48.6299 26.3187 47.8463L28.875 42.7337V51.4114L33.4998 53.1455L38.1248 51.4108V42.7337L40.6811 47.8463C41.073 48.63 41.8735 49.1245 42.7497 49.1245H49.687C50.964 49.1245 51.9994 48.0891 51.9994 46.8121C51.9994 45.5351 50.9641 44.4997 49.6871 44.4997Z"
+                  fill="white"
+                />
+                <circle cx="34" cy="7" r="7" fill="#00FFA3" /></svg
+            ></a>
+            <span class="profil-name">LaZen53</span>
+          </div>
+          <img
+            src="https://cdn.glitch.com/635f7807-931c-4359-955f-e5a30b567eb1%2Foptions.svg?v=1622464132733"
+            class="profil-options"
+          />
+        </div>
+      </nav>
+      <div class="menu-options case none">
+        <div class="title-options">
+          <img
+            class="engrenage-option"
+            src="https://cdn.glitch.com/635f7807-931c-4359-955f-e5a30b567eb1%2Foptions.svg?v=1622464132733"
+            alt="engrenage option"
+          />
+          <p class="word-title-options">Options</p>
+        </div>
+        <div class="container-liste-options">
+          <div class="edit-profil edit-item">
+            <img
+              class="profil-edit-img"
+              src="https://cdn.glitch.com/635f7807-931c-4359-955f-e5a30b567eb1%2Fedition-profil.svg?v=1622469121712"
+              alt="logo edition"
+            />
+            <p>Editer le profil</p>
+          </div>
+          <div class="edit-player edit-item">
+            <img
+              class="profil-edit-img"
+              src="https://cdn.glitch.com/635f7807-931c-4359-955f-e5a30b567eb1%2Fscalewhite.svg?v=1623231916494"
+              alt="logo agrandir ou rétrécir"
+            />
+            <p>Changer la taille du player</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="profil-utilisateur">
+        <div class="icone-utilisateur">
+          <svg
+            width="300"
+            height="300"
+            viewbox="0 0 67 78"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="33.5"
+              cy="44.5"
+              r="32"
+              stroke="#00FFA3"
+              stroke-width="3"
+            />
+            <path
+              d="M33.4996 35.2498C36.0538 35.2498 38.1245 33.1792 38.1245 30.6249C38.1245 28.0706 36.0538 26 33.4996 26C30.9453 26 28.8746 28.0706 28.8746 30.6249C28.8746 33.1792 30.9453 35.2498 33.4996 35.2498Z"
+              fill="white"
+            />
+            <path
+              d="M42.4887 59.6542L36.7931 61.7902L39.6255 62.8524C40.8444 63.305 42.1597 62.6779 42.6029 61.4986C42.8389 60.8694 42.7691 60.2104 42.4887 59.6542Z"
+              fill="white"
+            />
+            <path
+              d="M22.7497 51.5837C21.5562 51.1411 20.2216 51.7418 19.7722 52.9375C19.324 54.1332 19.9303 55.4656 21.126 55.9149L23.6208 56.8504L30.2073 54.3802L22.7497 51.5837Z"
+              fill="white"
+            />
+            <path
+              d="M47.2276 52.9376C46.7782 51.7418 45.4436 51.1411 44.2502 51.5838L25.7506 58.5212C24.5548 58.9706 23.9485 60.3029 24.3967 61.4987C24.8399 62.6775 26.1549 63.3052 27.3742 62.8524L45.8738 55.9151C47.0697 55.4657 47.676 54.1334 47.2276 52.9376Z"
+              fill="white"
+            />
+            <path
+              d="M49.6871 44.4997H44.1792L40.1934 36.528C39.7792 35.7004 38.9366 35.2289 38.0682 35.2499H33.4999H28.9314C28.0631 35.2289 27.2216 35.7005 26.8065 36.528L22.8206 44.4997H17.3128C16.0358 44.4997 15.0004 45.5351 15.0004 46.8121C15.0004 48.0891 16.0358 49.1245 17.3128 49.1245H24.2501C25.1264 49.1245 25.9269 48.6299 26.3187 47.8463L28.875 42.7337V51.4114L33.4998 53.1455L38.1248 51.4108V42.7337L40.6811 47.8463C41.073 48.63 41.8735 49.1245 42.7497 49.1245H49.687C50.964 49.1245 51.9994 48.0891 51.9994 46.8121C51.9994 45.5351 50.9641 44.4997 49.6871 44.4997Z"
+              fill="white"
+            />
+            <circle cx="34" cy="7" r="7" fill="#00FFA3" />
+          </svg>
+        </div>
+        <div class="interface-utilisateur">
+          <div class="description-utilisateur">
+            <div class="bonjour">
+              <h2>Bonjour</h2>
+              <h1>LaZen53</h1>
+              <div class="edition-profil-container">
+                <img
+                  src="https://cdn.glitch.com/635f7807-931c-4359-955f-e5a30b567eb1%2Fedition-profil.svg?v=1622469121712"
+                  alt="edition du profil"
+                  class="edition-profil"
+                />
+              </div>
+            </div>
+            <!--             php pseudo -->
+
+            <div class="niveau-utilisateur">
+              <p>
+                34
+              </p>
+              <div class="progression">
+                <div class="pourcentage-progression"></div>
+              </div>
+              <p>
+                35
+              </p>
+              <!--             php niveau -->
+              <!--             php barre de progression -->
+              <!--             php niveau suivant-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="enveloppe">
+        <section class="inventaire case">
+          <h2>inventaire</h2>
+          <div class="categorie">
+            <input
+              type="radio"
+              id="tout"
+              name="categorie"
+              value="tout"
+              checked
+            />
+            <label for="tout">Tout</label><br />
+            <input type="radio" id="ban" name="categorie" value="ban" />
+            <label for="ban">Bannière du player</label><br />
+            <input
+              type="radio"
+              id="iconeprof"
+              name="categorie"
+              value="iconeprof"
+            />
+            <label for="iconeprof">Icone de profil</label>
+          </div>
+          <div class="fond-lecteur">
+            <div class="texte-chrono">
+              <p class="texte-lecteur">Fond lecteur</p>
+              <div class="chronometre">
+                <!-- <img src="https://cdn.glitch.com/635f7807-931c-4359-955f-e5a30b567eb1%2Fchronometre-accueil.png?v=1622465682960"
+                                  alt="chronometre" />
+                                  <p>13h45min</p> -->
+              </div>
+            </div>
+
+            <div class="fond">
+              <svg
+                class="fleche-fond fleche swiper-button-fondbib-prev"
+                width="46"
+                height="76"
+                viewBox="0 0 46 76"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.88717 40.9655L35.7081 74.7859C36.4904 75.5687 37.5346 76 38.648 76C39.7614 76 40.8057 75.5687 41.5879 74.7859L44.0786 72.2958C45.6993 70.6732 45.6993 68.0361 44.0786 66.416L15.6783 38.0158L44.1101 9.58395C44.8923 8.8011 45.3242 7.75749 45.3242 6.64469C45.3242 5.53065 44.8923 4.48705 44.1101 3.70358L41.6194 1.21413C40.8365 0.431275 39.7929 4.83559e-07 38.6795 5.80898e-07C37.5661 6.78236e-07 36.5219 0.431275 35.7396 1.21414L1.88717 35.0654C1.10307 35.8507 0.672413 36.8992 0.674885 38.0139C0.672413 39.1329 1.10307 40.1808 1.88717 40.9655Z"
+                  fill="white"
+                />
+              </svg>
+              <div class="imgs-fond swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="div-fond swiper-slide">
+                    <img
+                      class="image-fond img-fond"
+                      src="https://cdn.glitch.com/635f7807-931c-4359-955f-e5a30b567eb1%2FFOND1BIEN.png?v=1623052621035"
+                      alt="Fond d'écran"
+                    />
+                    <div class="bloc-achat-fond">
+                      <p class="cout">
+                        Obtenu le <span class="cout-chiffres">05/02/2021</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="div-fond swiper-slide">
+                    <img
+                      class="image-fond2 img-fond"
+                      src="https://cdn.glitch.com/635f7807-931c-4359-955f-e5a30b567eb1%2Feberhard-grossgasteiger-jCL98LGaeoE-unsplash%201%20(3).png?v=1623072923239"
+                      alt="Fond d'écran"
+                    />
+                    <div class="bloc-achat-fond">
+                      <p class="cout">
+                        Obtenu le <span class="cout-chiffres">05/02/2021</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="div-fond swiper-slide">
+                    <img
+                      class="image-fond3 img-fond"
+                      src="https://cdn.glitch.com/635f7807-931c-4359-955f-e5a30b567eb1%2Fdaniel-roe-lpjb_UMOyx8-unsplash%201%20(1).png?v=1623072885163"
+                      alt="Fond d'écran"
+                    />
+                    <div class="bloc-achat-fond">
+                      <p class="cout">
+                        Obtenu le <span class="cout-chiffres">05/02/2021</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <svg
+                class="fleche-fond fleche swiper-button-fondbib-next"
+                width="46"
+                height="76"
+                viewBox="0 0 46 76"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M44.1128 35.0345L10.2919 1.21414C9.50963 0.431281 8.46541 0 7.35199 0C6.23857 0 5.19435 0.431281 4.41211 1.21414L1.92143 3.7042C0.300728 5.32675 0.300728 7.96387 1.92143 9.58395L30.3217 37.9842L1.88992 66.416C1.10768 67.1989 0.675781 68.2425 0.675781 69.3553C0.675781 70.4694 1.10768 71.513 1.88992 72.2964L4.3806 74.7859C5.16345 75.5687 6.20705 76 7.32048 76C8.4339 76 9.47812 75.5687 10.2604 74.7859L44.1128 40.9346C44.8969 40.1493 45.3276 39.1008 45.3251 37.9861C45.3276 36.8671 44.8969 35.8192 44.1128 35.0345Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <div class="icone-profil">
+            <p class="texte-profil bold">Icône de profil</p>
+
+            <div class="icone">
+              <svg
+                class="fleche-icone fleche swiper-button-icones-prev"
+                width="46"
+                height="76"
+                viewBox="0 0 46 76"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.88717 40.9655L35.7081 74.7859C36.4904 75.5687 37.5346 76 38.648 76C39.7614 76 40.8057 75.5687 41.5879 74.7859L44.0786 72.2958C45.6993 70.6732 45.6993 68.0361 44.0786 66.416L15.6783 38.0158L44.1101 9.58395C44.8923 8.8011 45.3242 7.75749 45.3242 6.64469C45.3242 5.53065 44.8923 4.48705 44.1101 3.70358L41.6194 1.21413C40.8365 0.431275 39.7929 4.83559e-07 38.6795 5.80898e-07C37.5661 6.78236e-07 36.5219 0.431275 35.7396 1.21414L1.88717 35.0654C1.10307 35.8507 0.672413 36.8992 0.674885 38.0139C0.672413 39.1329 1.10307 40.1808 1.88717 40.9655Z"
+                  fill="white"
+                />
+              </svg>
+              <div class="liste-icones swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="div-icone div-icone1 swiper-slide">
+                    <img
+                      src="https://cdn.glitch.com/635f7807-931c-4359-955f-e5a30b567eb1%2Ficone-accueil.svg?v=1622465682961"
+                      alt="icone"
+                      class="image-icone"
+                    />
+                    <div class="bloc-achat-icone">
+                      <p class="cout">
+                        Obtenu le <span class="cout-chiffres">05/02/2021</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="div-icone div-icone2 swiper-slide">
+                    <img
+                      src="https://cdn.glitch.com/635f7807-931c-4359-955f-e5a30b567eb1%2FGroup%20(1).png?v=1623078264762"
+                      alt="icone"
+                      class="image-icone"
+                    />
+                    <div class="bloc-achat-icone">
+                      <p class="cout">
+                        Obtenu le <span class="cout-chiffres">05/02/2021</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="div-icone div-icone3 swiper-slide">
+                    <img
+                      src="https://cdn.glitch.com/635f7807-931c-4359-955f-e5a30b567eb1%2FGroup%20(2).png?v=1623078262134"
+                      alt="icone"
+                      class="image-icone"
+                    />
+                    <div class="bloc-achat-icone">
+                      <p class="cout">
+                        Obtenu le <span class="cout-chiffres">05/02/2021</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="div-icone div-icone4 swiper-slide">
+                    <img
+                      src="https://cdn.glitch.com/635f7807-931c-4359-955f-e5a30b567eb1%2FGroup%20(3).png?v=1623078259616"
+                      alt="icone"
+                      class="image-icone"
+                    />
+                    <div class="bloc-achat-icone">
+                      <p class="cout">
+                        Obtenu le <span class="cout-chiffres">05/02/2021</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <svg
+                class="fleche-icone fleche swiper-button-icones-next"
+                width="46"
+                height="76"
+                viewBox="0 0 46 76"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M44.1128 35.0345L10.2919 1.21414C9.50963 0.431281 8.46541 0 7.35199 0C6.23857 0 5.19435 0.431281 4.41211 1.21414L1.92143 3.7042C0.300728 5.32675 0.300728 7.96387 1.92143 9.58395L30.3217 37.9842L1.88992 66.416C1.10768 67.1989 0.675781 68.2425 0.675781 69.3553C0.675781 70.4694 1.10768 71.513 1.88992 72.2964L4.3806 74.7859C5.16345 75.5687 6.20705 76 7.32048 76C8.4339 76 9.47812 75.5687 10.2604 74.7859L44.1128 40.9346C44.8969 40.1493 45.3276 39.1008 45.3251 37.9861C45.3276 36.8671 44.8969 35.8192 44.1128 35.0345Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+          </div>
+        </section>
+
+        <div class="petite-enveloppe">
+          <div class="forme-humeur case">
+            <div class="humeur-du-jour">
+              <h3>
+                Humeur du jour
+              </h3>
+            </div>
+            <div class="container-forme">
+              <span>en forme</span>
+            </div>
+            <!--             php forme colorée -->
+
+            <!--             php txt1 -->
+          </div>
+          <div class="webradio-du-jour case">
+            <h3>
+              Votre webradio du jour
+            </h3>
+            <div class="case-webradio-du-jour">
+              <img
+                src="https://cdn.glitch.com/635f7807-931c-4359-955f-e5a30b567eb1%2Flogo-smooth-chill%201.svg?v=1622469135817"
+              />
+              <!--             php forme colorée -->
+              <span>Smooth chill</span>
+              <span>catégorie</span>
+              <!--             php nom webradio -->
+              <!--             php catégorie -->
+            </div>
+          </div>
+          <div class="pub-profil case">
+            <img
+              src="https://cdn.glitch.com/635f7807-931c-4359-955f-e5a30b567eb1%2Frechercher.svg?v=1622465544509"
+            />
+            <!--             php pub -->
+          </div>
+        </div>
+      </div>
+      <div class="sound-number">
+        <img
+          src="https://cdn.glitch.com/635f7807-931c-4359-955f-e5a30b567eb1%2Fvolume-on.svg?v=1622727665479"
+          alt="logo-volume"
+        />
+        <span>0</span>
+      </div>
+      <img
+        src="https://cdn.glitch.com/635f7807-931c-4359-955f-e5a30b567eb1%2Fmontagne.webp?v=1622467589036"
+        class="fond-montagne"
+      />
+      <div class="container-player"></div>
+      </div>
+      <div class="loader">
+        <img
+          class="logo-loader"
+          src="https://cdn.glitch.com/635f7807-931c-4359-955f-e5a30b567eb1%2Foptions.svg?v=1622464132733"
+          alt=""
+        />
+      </div>
+    </main>
+    <footer>
+      <div class="footer-links">
+        <a href="">Qui-sommes-nous ?</a>
+        <a href="">FAQ</a>
+        <a href="">Conditions d'utilisations</a>
+      </div>
+      <p class="footer-name">Moosic -> 2021</p>
+    </footer>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="swiper.js"></script>
+  <script src="player.js"></script>
+</html>

@@ -1,0 +1,90 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.explication-choix {
+  display: flex;
+  flex-direction: column;
+  justify-content : center;
+  align-items : center;
+}
+
+.selection-mood {
+  display: grid;
+  grid-template-rows: auto repeat(3, 1fr);
+  justify-content: center;
+  width: 80%;
+  margin-bottom : 10%;
+}
+
+.titre {
+  text-align: center;
+  margin-bottom : 2%;
+}
+
+.brique {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: center;
+width: 100%;
+margin-bottom: 2%;
+    border-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.forme {
+  padding-left: 20px;
+    color: white;
+}
+
+/* main */
+/* version tablet */
+@media all and (min-width: 481px) {
+}
+
+/* version laptop */
+@media all and (min-width: 1025px) {
+  .explication-choix {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top : 5%;
+  }
+
+  .description-mood {
+    text-align: justify;
+    width: 150%;
+    margin-right : 5%;
+  }
+
+  .titre {
+    text-align : center;
+  }
+
+  .selection-mood {
+    margin-left: 5%;
+    margin : auto;
+  }
+
+  .pub {
+    width: 50%;
+  }
+
+  .brique svg {
+    min-width: 50px;
+    min-height: 25px;
+  }
+
+  .forme {
+  }
+}
+
+/* version desktop */
+@media all and (min-width: 1600px) {
+  .brique p{
+    font-size : 1.5rem;
+  }
+}

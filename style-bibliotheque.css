@@ -1,0 +1,122 @@
+.disparition {
+  visibility: hidden;
+}
+
+.listes-webradios {
+  margin-bottom: 5vw;
+}
+
+.zone-titre {
+  display: grid;
+  grid-template-columns: 90% 1fr;
+}
+
+
+
+.case-radio {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--grey);
+  border-radius: 10px;
+  padding: 20px;
+  align-items: center;
+}
+
+.case-radio p {
+  margin: 2%;
+  font-size: 1.2rem;
+}
+
+.case-radio p:last-child {
+  color: #03F29E;
+}
+
+.swiper-like,
+.swiper-rec {
+  position: relative;
+}
+
+.swiper-button-like-prev,
+.swiper-button-like-next,
+.swiper-button-rec-prev,
+.swiper-button-rec-next {
+  position: absolute;
+    top: 45%;
+}
+
+.swiper-button-like-prev,
+.swiper-button-rec-prev {
+  left: 5%;
+}
+
+.swiper-button-like-next,
+.swiper-button-rec-next {
+
+  right: 5%;
+}
+
+
+
+.logo-radio {
+  width: 100%;
+  border-radius : 20px;
+}
+
+@media all and (min-width: 481px) {
+  .trait {
+    width: 80%;
+    height: 105%;
+    margin-left: 5%;
+  }
+
+  .zone-titre {
+    grid-template-columns: 70% 1fr;
+  }
+
+  .swiper-container {
+    width: 70%;
+    padding: 2% 0% 2% 0%
+  }
+}
+
+@media all and (min-width: 796px) {
+  .zone-titre {
+    grid-template-columns: 35% 1fr;
+  }
+
+    .trait {
+
+    width:80%;
+    height: 30%;
+    margin: 3.5% 0% 0% 2%
+
+
+    }
+}
+
+/* version laptop */
+@media all and (min-width: 1024px) {
+  .trait {
+    clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
+  }
+
+  .zone-titre {
+    grid-template-columns: 25% 1fr;
+  }
+}
+
+/* version desktop */
+@media all and (min-width: 1600px) {
+  .zone-titre {
+    grid-template-columns: 18% 1fr;
+  }
+
+    .trait {
+
+    width:95%;
+    height: 30%;
+    margin: 1.8% 0% 0% 2%
+
+
+    }
+}

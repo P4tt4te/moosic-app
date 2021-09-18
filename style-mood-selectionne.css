@@ -1,0 +1,125 @@
+
+main {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .mood-selectionne {
+  margin-top: 10vh;
+  }
+  
+  .container-mood {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--green);
+    width: 100vw;
+    padding-bottom: 10vw;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .personne {
+    width: 250px;
+    display: flex;
+    position: absolute;
+    top: 17%;
+    right:  -3%;
+  }
+  
+  .mood {
+    display: flex;
+    align-items: center;
+    background-color: var(--grey);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .mood span{
+      margin-left:2vw;
+      list-style: none;
+      
+  }
+  a{
+    text-decoration: none;
+    list-style: none;
+  }
+  /* .mood::before {
+    margin-right: 2vw;
+    content: " ";
+    height: 20px;
+    width: 20px;
+    background-color: var(--green);
+    border-radius: 100%;
+  } */
+  
+  .container-mood p {
+    width: 70%;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  
+  .container-proposition {
+    width: 80vw;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .container-proposition p {
+    font-weight: bold;
+  }
+  
+  .container-proposition input {
+    margin-top: 3vh;
+    font-weight: bold;
+  }
+  
+  .container-proposition span {
+    color: var(--gold);
+  }
+  
+  
+  
+  .bouton1 input {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+  
+    padding: 10px;
+    border-radius: 15px;
+    border-style: none;
+    cursor: pointer;
+  }
+  
+  .MODULE-PUB{
+    display: none;
+  }
+  
+  @media all and (min-width: 1024px) {
+  
+    .container-mood {
+      width: 40vw;
+      border-radius: 15px;
+      padding-bottom: 5vh;
+    }
+  
+    .personne{
+      right:30vw;
+      top: 19vh;
+    }
+  
+    .container-proposition{
+      width: 30vw;
+    }
+  
+    .MODULE-PUB{
+      margin-top: 7vh;
+      display: block;
+    }
+  
+  }
+  

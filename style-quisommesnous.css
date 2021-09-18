@@ -1,0 +1,90 @@
+.entete h1{
+  font-size: 2rem;
+  margin-top: 8vh;
+  padding: 2vw;
+}
+
+.entete p{
+font-size: 2rem;
+text-align: justify;
+padding: 2vw;
+}
+
+.equipe h2{
+  font-size:5rem;
+  padding: 2vw;
+}
+
+.liste-equipiers{
+  background-color: var(--darkgrey);
+  border-radius: 20px;
+  text-align: center;
+  padding: 5vh;
+}
+
+.photo img{
+border-radius: 50%;
+width: 50%;
+}
+
+
+.flaticons img{
+margin-bottom: 3vh;
+width: 10%;
+}
+
+footer{
+    font-size: 1.2rem;
+
+}
+
+footer .footer-links{
+  justify-content: space-around;
+}
+
+@media all and (min-width: 1025px) {
+
+  .entete h1{
+    font-size: 6rem;
+    margin-top: 8vh;
+    padding: 2vw;
+  }
+
+  .liste-equipiers{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  .photo img{
+  border-radius: 50%;
+  width: 100%;
+  }
+
+    .nous {
+
+        max-width: 80%
+    }
+
+  .flaticons img{
+  margin-bottom: 3vh;
+  width: 20%;
+  }
+
+  .liste-equipiers p{
+    font-size: 1.3rem;
+  }
+
+}
+
+@media all and (min-width: 1600px) {
+
+    .nous {
+
+        max-width: 100%
+
+    }
+
+
+}

@@ -1,0 +1,457 @@
+/******************************************************************************
+START Glitch hello-app default styles
+
+The styles in this section do some minimal CSS resets, set default fonts and
+colors, and handle the layout for our footer and "Remix on Glitch" button. If
+you're new to CSS they may seem a little complicated, but you can scroll down
+to this section's matching END comment to see page-specific styles.
+******************************************************************************/
+:root {
+  --grey: #2e2b45;
+  --lightgrey: #34314f;
+  --darkgrey: #26233a;
+  --green: #03f29e;
+  --gold: #ffc15e;
+  --red: #ff0000;
+  --yellow: #faff00;
+  /*pour l'animation du next de remi */
+  --dark-color: #03F29E;
+  --light-color: 'white';
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--lightgrey);
+  color: white;
+  margin: 4%;
+}
+
+svg {
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+
+p {
+  font-weight: 400;
+}
+
+.case {
+  background-color: var(--grey);
+  border-radius: 10px;
+  padding: 20px;
+  filter: drop-shadow(-2px 5px 1px rgba(0, 0, 0, 0.25));
+  box-sizing: border-box;
+}
+
+.pub {
+  width:100%;
+}
+
+.draggable {
+  user-select: none;
+  touch-action: none;
+}
+
+
+/* header */
+header {
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+}
+
+/* player */
+.player {
+  position: fixed;
+  z-index:5;
+  box-sizing: content-box;
+  cursor: pointer;
+}
+
+.songcommand {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.songcommand img {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.interactgroup {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+
+.nom-radio {
+  text-align: center;
+  vertical-align: middle;
+  margin: auto;
+  padding-left: 10px;
+}
+
+
+/* player medium */
+
+.player-medium {
+  height:60px;
+  display:flex;
+  justify-content: space-between;
+}
+
+.logo-player-medium {
+  height:100%;
+}
+
+/* animation next */
+
+.triangles {
+  user-select: none;
+  touch-action: none;
+}
+
+.darkGroup {
+  fill: var(--dark-color);
+}
+.lightGroup {
+  fill: var(--light-color);
+}
+.dark1,
+.light1,
+.dark2 {
+  transition: all 0.5s ease;
+}
+
+
+.dark1.transb,.light1.transb,.dark2.transb {
+  transition: all 0.001s;
+}
+
+.dark2 {
+  transform: translateX(-90%);
+}
+
+.triangles.on .dark1 {
+  transform: translateX(40%);
+  opacity: 0;
+}
+.triangles.on .dark2 {
+  transform: translateX(17%);
+}
+
+svg.rotate {
+  transform: rotateZ(180deg);
+}
+
+/* barre de son */
+
+.zone-volume {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 10px;
+}
+
+.volume-up {
+
+}
+
+.volume-down {
+
+}
+
+/* menu */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 6.5vh;
+  font-weight: 600;
+  background-color: var(--green);
+  position: fixed;
+  top:0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  flex-direction: column;
+  width: 100%;
+  clip-path: circle(125.0% at 50% 7%);
+  animation: 1s anim-menu;
+  flex-shrink: 0;
+  filter: drop-shadow(-2px 5px 1px rgba(0, 0, 0, 0.25));
+}
+
+nav ul {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 0;
+}
+
+nav li {
+  margin-right: 0;
+  align-items: center;
+  font-size: 2rem;
+  list-style: none;
+  display: inline;
+  text-align: center;
+}
+
+nav li a {
+  text-decoration: none;
+  color:white;
+}
+
+
+nav.mobile-off {
+  clip-path: circle(6% at 50% 9%);
+  animation: 1s anim-menu-off;
+}
+
+/* animation menu mobile */
+
+@keyframes anim-menu {
+  0% {
+    clip-path: circle(6% at 50% 9%);
+  }
+
+  100% {
+    clip-path: circle(125.0% at 50% 9%);
+  }
+}
+
+@keyframes anim-menu-off {
+  0% {
+    clip-path: circle(125.0% at 50% 9%);
+  }
+
+  100% {
+    clip-path: circle(6% at 50% 9%);
+  }
+}
+
+/* animation menu burger pour mobile */
+
+#menu1.actif #BARRE-MILLIEU2 {
+  transform: rotate(-60deg);
+}
+
+#BARRE-MILLIEU2 {
+  transition: all 1s ease;
+  transform-origin: center;
+}
+
+#menu1.actif #BARRE-MILLIEU {
+  transform: rotate(60deg);
+}
+
+#BARRE-MILLIEU {
+  transition: all 1s ease;
+  transform-origin: center;
+}
+
+#BARRE-BAS {
+  transition: all 1s ease;
+  transform-origin: center;
+}
+
+#menu1.actif #BARRE-BAS {
+  transform: translateY(500px);
+}
+
+#menu1.actif #BARRE-HAUT {
+  transform: translateY(-500px);
+}
+
+#BARRE-HAUT {
+  transition: all 1s ease;
+  transform-origin: center;
+}
+
+.profil-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.profil {
+  display: flex;
+}
+
+.profil-options {
+  margin-left: 5px;
+}
+
+/* main */
+.fond-montagne {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* footer */
+footer {
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  height: 100px;
+  align-items: center;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.footer-links {
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer-links>a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-name {
+  display:none;
+}
+
+/* version tablet */
+@media all and (min-width: 481px) {
+
+  nav {
+    padding-top: 7vh;
+  }
+
+  .footer-links {
+    flex-direction: row;
+  }
+}
+
+/* version tablet landscape */
+@media all and (min-width: 769px) {
+  nav {
+    padding-top: 7.5vh;
+  }
+}
+
+/* version laptop */
+@media all and (min-width: 1025px) {
+  body {
+    margin: 2%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-weight: 600;
+  }
+
+  p {
+    font-weight: 400;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: static;
+    background-color: transparent;
+    clip-path: none;
+    animation: none;
+    padding-top: 1%;
+  }
+
+  nav ul {
+    vertical-align: middle;
+    text-align: right;
+    margin: auto;
+    padding-left: 0;
+    padding-top: 2vw;
+    width: 100%;
+    display: inline;
+  }
+
+  nav li {
+    height: 100%;
+    font-size: 1rem;
+    margin-right: 7%;
+    padding-top: 40%;
+  }
+
+  #menu-burger {
+    display: none;
+  }
+
+  .case {
+    background-color: var(--grey);
+    border-radius: 10px;
+    padding: 20px;
+    filter: drop-shadow(-2px 5px 1px rgba(0, 0, 0, 0.25));
+  }
+  /* footer */
+  footer {
+    justify-content: space-between;
+    margin-top: 200px;
+  }
+
+  .footer-links {
+    width: 40%;
+    justify-content: space-around;
+  }
+
+
+  .footer-name {
+    display:block;
+  }
+}
+
+/* version desktop */
+@media all and (min-width: 1600px) {
+
+
+  /* footer */
+
+  .footer-links {
+    width:35%;
+  }
+}

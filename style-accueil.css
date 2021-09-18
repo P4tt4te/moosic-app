@@ -1,0 +1,1043 @@
+/******************************************************************************
+START Glitch hello-app default styles
+
+The styles in this section do some minimal CSS resets, set default fonts and
+colors, and handle the layout for our footer and "Remix on Glitch" button. If
+you're new to CSS they may seem a little complicated, but you can scroll down
+to this section's matching END comment to see page-specific styles.
+******************************************************************************/
+
+:root {
+  --grey: #2e2b45;
+  --lightgrey: #34314f;
+  --darkgrey: #26233a;
+  --green: #03f29e;
+  --gold: #ffc15e;
+  --red: #ff0000;
+  --yellow: #faff00;
+}
+
+.tutoriel {
+  display: flex;
+      flex-direction: column;
+      text-align: center;
+      position: fixed;
+      padding: 25px;
+      width: 80%;
+      top: 25%;
+      left: 10%;
+      background-color: var(--grey);
+      z-index: 30;
+      border: 5px solid var(--green);
+      border-radius: 15px;
+      filter: drop-shadow(10px 10px 10px var(--grey));
+      align-items: center;
+  }
+
+.quitter,.quitterb {
+  vertical-align: middle;
+  text-align: center;
+  cursor : pointer;
+  transition: all 0.5s ease-out;
+}
+
+.quitter:hover,.quitterb:hover {
+  background-color: var(--green);
+}
+
+.video-tuto {
+  width: 100%;
+  height: 40%;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.cout,
+.bold {
+  font-weight: 600;
+}
+
+.overlay-invisible{
+    display: none;
+  }
+
+  .overlay-visible {
+    display: block;
+    position: fixed;
+    width: 50%;
+    top: 25%;
+    left: 25%;
+    background-color: var(--grey);
+    z-index: 2;
+    border: 5px solid var(--green);
+    border-radius: 15px;
+    filter: drop-shadow(10px 10px 10px var(--grey));
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .form-container h2 {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+
+  .form-inscription input {
+    width: 70%;
+    height: 40px;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    font-size: 16px;
+    background-color: var(--lightgrey);
+    border-style: none;
+  }
+
+  .form-submit input {
+    margin: 3vh;
+    font-size: 15px;
+    background-color: var(--green);
+    color: var(--grey);
+    width: 20%;
+    cursor: pointer;
+  }
+
+  .form-submit input:hover {
+    background-color: white;
+    transition: background-color 0.5s ease;
+  }
+
+.disparition{
+  visibility : hidden;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    "carre-niveau carre-niveau mood-points mood-points"
+    "carre-niveau carre-niveau heures-ecoutes heures-ecoutes"
+    "shop shop shop shop"
+    "des-aleatoire des-aleatoire des-aleatoire des-aleatoire"
+    "meilleures-webradios meilleures-webradios meilleures-webradios meilleures-webradios"
+    "playlist-decouvrir playlist-decouvrir playlist-decouvrir playlist-decouvrir";
+  grid-gap: 1% 5%;
+  align-items: center;
+}
+
+.carre-niveau {
+  grid-area: carre-niveau;
+}
+
+.mood-points {
+  grid-area: mood-points;
+  text-align : center;
+}
+
+.heures-ecoutes {
+  grid-area: heures-ecoutes;
+}
+
+.shop {
+  grid-area: shop;
+  align-self: flex-start;
+}
+
+.des-aleatoire {
+  grid-area: des-aleatoire;
+}
+
+.meilleures-webradios {
+  grid-area: meilleures-webradios;
+  margin: auto;
+}
+
+.playlist-decouvrir {
+  grid-area: playlist-decouvrir;
+  margin: auto;
+}
+
+.profil-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 105%;
+  grid-gap: 5%;
+  width: 100%;
+  margin-bottom: 10%;
+  margin-top: 5%;
+}
+
+.profil-name{
+  text-align : center;
+}
+
+.carre-niveau,
+.carre-statistiques-joueur {
+  height: 100%;
+  text-align: center;
+}
+
+.carre-niveau {
+  width: 100%;
+}
+
+.carre-statistiques-joueur {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-gap: 5%;
+  justify-content: center;
+  align-items: center;
+}
+
+.heures-ecoutes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.mood-points {
+  height: 100%;
+}
+
+.cercle-profil {
+  position: absolute;
+  width: 100%;
+  top: -30%;
+  left: 0%;
+}
+
+.bonjour,
+.pseudo {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.pseudo {
+  color: #FFC15E;
+  font-size: 1.725rem;
+}
+
+.level {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.niveau-chiffres {
+  font-size: 1.725rem;
+}
+
+.div-niveau {
+  margin: 30% auto 10% auto;
+  position: relative;
+  width: 120px;
+}
+
+.points-chiffres {
+  font-size: 4rem;
+  color: #FFC15E;
+}
+
+.debutpoints {
+  display: none;
+}
+
+.points {
+  font-size: 1.2rem;
+  margin: 0;
+  margin-top: -10%;
+}
+
+.temps-ecoute {
+  font-size: 1.2rem;
+  margin: auto;
+}
+
+.temps-ecoute-heures {
+  color: #03f29e;
+}
+
+.shop {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.fond-lecteur {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.div-fond {
+  position: relative;
+}
+
+.img-fond {
+  width: 100%;
+  border: 3px solid #FFC15E;
+  border-radius: 15px;
+}
+
+.div-fond1,
+.div-fond2,
+.div-fond3 {
+  position: relative;
+}
+
+.bloc-achat-fond {
+  position: absolute;
+  bottom: 4%;
+  right: 1%;
+  background-color: #FFC15E;
+  border-radius: 5px;
+  color: black;
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  width : 70%;
+  height : 25%;
+}
+
+.bloc-selectione{
+  display : none;
+}
+
+
+.cout {
+  font-size: 100%;
+  margin: 0;
+}
+
+.icone-profil {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.div-icone-acc {
+  margin: auto;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.div-icone1{
+  position: relative;
+}
+
+.img-radios {
+  width: 80%;
+  margin: 10%;
+}
+
+.bloc-achat-icone {
+  bottom: 2%;
+  right: 0%;
+  background-color: #FFC15E;
+  border-radius: 5px;
+  color: black;
+  padding: 5%;
+  text-align: center;
+  width : 100%;
+}
+
+.bloc-vert{
+  background-color : #03f29e;
+}
+
+
+.texte-lecteur,
+.texte-profil {
+  font-size: 1.725rem;
+  color: #FFC15E;
+}
+
+.texte-chrono {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chronometre {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  height: 30px;
+  border-radius: 20px;
+  padding: 2%;
+  padding-right: 3%;
+}
+
+.chronometre p {
+  color: black;
+  font-size: 0.9rem;
+}
+
+.chronometre img {
+  width: 20%;
+  object-fit: contain;
+  margin-right: 10%;
+}
+
+.des-aleatoire {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hasard-txt {
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+.img-de {
+  background-color: #03f29e;
+  border-radius: 25px;
+  margin-bottom: 2%;
+}
+
+.meilleures-webradios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width : 100%;
+  max-width: calc(481px - (4% * 2));
+}
+
+.meilleures-txt {
+  font-size: 1.5rem;
+}
+
+.radio-txt {
+  font-size: 1.25rem;
+}
+
+.radio-txt p {
+  margin: 10% 0 5% 0;
+}
+
+.radio-txt span {
+  color: #03f29e;
+}
+
+.playlist-decouvrir {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: calc(481px - (4% * 2));
+}
+
+.playlist-txt {
+  font-size: 1.25rem;
+}
+
+.image-playlist {
+  width: 100%;
+}
+
+.MODULE-PUB {
+  margin-top: 50%;
+}
+
+.cout-chiffres {
+  font-size: 200%;
+  margin-bottom: -5%;
+  text-align : center;
+}
+
+.cout {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align : center;
+}
+
+.fond {
+  position: relative;
+}
+
+.icone {
+  position: relative;
+}
+
+.best-radio,
+.swiper-container {
+  width: 60%;
+}
+
+.swiper-button-icones-prev,
+.swiper-button-fondbib-prev {
+  position: absolute;
+  top: 30%;
+  left: 0%;
+}
+
+.swiper-button-icones-next,
+.swiper-button-fondbib-next {
+  position: absolute;
+  top: 30%;
+  right: 0%;
+}
+
+.swiper-wrapper {
+  align-items: flex-end;
+}
+
+.imgs-meilleures-webradios{
+ position : relative;
+  width : 100%;
+}
+
+.swiper-button-best-prev {
+  position: absolute;
+  top: 40%;
+  left: 0%;
+}
+
+.swiper-button-best-next {
+  position: absolute;
+  top: 40%;
+  right: 0%;
+}
+
+.image-best-webradio{
+  border-radius : 10px;
+    width: 100%;
+}
+
+@keyframes desmouvement  {
+
+            0% {
+
+                transform: translateX(0px);
+
+            }
+
+            100% {
+
+                transform: translateY(25px);
+
+            }
+
+
+
+        }
+
+        @keyframes demouvementdroit  {
+
+            0% {
+
+                transform: translateX(0px);
+
+            }
+
+            100% {
+
+                transform: translateY(15px);
+
+            }
+
+            }
+
+             @keyframes demouvementgauche  {
+
+            0% {
+
+                transform: translateX(0px);
+
+            }
+
+            100% {
+
+                transform: translateY(-70px) rotate(25deg);
+                transform-origin: center;
+
+            }
+
+
+
+        }
+
+
+         @keyframes rotationinfiniedroit  {
+
+            0% {
+
+                transform: rotateX(0deg);
+
+            }
+
+            100% {
+
+                transform: rotateY(-500deg);
+
+            }
+
+        }
+
+        @keyframes rotationinfiniegauche  {
+
+            0% {
+
+                transform: rotateX(0deg);
+
+            }
+
+            100% {
+
+                transform: rotateY(500deg);
+
+            }
+
+        }
+
+
+        .des-aleatoire:hover .svg-des{
+
+            animation: 2s ease infinite alternate desmouvement;
+
+        }
+
+        .des-aleatoire:hover #desdroit {
+
+            animation: 2s ease infinite alternate demouvementdroit;
+
+        }
+
+        .des-aleatoire:hover #desgauche {
+
+            animation: 2s ease infinite alternate demouvementgauche;
+
+        }
+
+         .des-aleatoire:active #desdroit {
+
+             animation: 2s ease infinite alternate rotationinfinie;
+             transform-origin: center;
+
+        }
+
+        .des-aleatoire:active #desgauche {
+
+        animation: 2s ease infinite alternate rotationinfiniegauche;
+        transform-origin: center;
+
+        }
+
+        .des-aleatoire:active #desdroit {
+
+        animation: 2s ease infinite alternate rotationinfiniedroit;
+        transform-origin: center;
+
+        }
+
+/* version tablet */
+
+@media all and (min-width: 481px) {
+  .div-icone2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .div-icone2 img {
+    width: 65%;
+    margin-bottom: 14%;
+  }
+
+  .MODULE-PUB {
+    margin-top: 30%;
+  }
+
+  .best-radio,
+  .swiper-container {
+    width: 70%;
+  }
+}
+
+@media all and (min-width: 769px) {
+  .MODULE-PUB {
+    margin-top: 20%;
+  }
+
+  .bonjour {
+    font-size: 2rem;
+  }
+
+  .pseudo {
+    font-size: 2.5rem;
+  }
+
+  .level {
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  .niveau-chiffres {
+    font-size: 2.5rem;
+  }
+
+  .div-niveau {
+    margin: 15% auto auto auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cercle-profil {
+    position: absolute;
+    width: 140%;
+    top: -30%;
+    left: -20%;
+  }
+
+  .mood-points {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .points {
+    margin-top: 0;
+    font-size: 2rem;
+  }
+
+  .temps-ecoute{
+    font-size : 1.725rem;
+  }
+
+  .best-radio,
+  .swiper-container {
+    width: 70%;
+  }
+}
+
+/* version laptop */
+
+@media all and (min-width: 1024px) {
+  .tutoriel {
+      flex-direction: row;
+      justify-content: space-around;
+      height: 50vh;
+
+  }
+
+  .quitter,.quitterb {
+    width:100px;
+  }
+
+  .video-tuto {
+    width: 80%;
+    height:100%;
+    margin-top: auto;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 0px 0px;
+    grid-template-areas:
+      "carre-niveau mood-points mood-points heures-ecoutes"
+      "carre-niveau des-aleatoire des-aleatoire meilleures-webradios"
+      "shop shop shop meilleures-webradios"
+      "shop shop shop meilleures-webradios"
+      "shop shop shop playlist-decouvrir";
+    grid-gap: 2% 5%;
+    margin-top: 2%;
+  }
+
+  .mood-points {
+    flex-direction: row;
+  }
+
+  .carre-niveau {
+    grid-area: carre-niveau;
+    width: 100%;
+    height: 100%;
+  }
+
+  .mood-points {
+    grid-area: mood-points;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .debutpoints {
+    display: block;
+  }
+
+  .mood-points p {
+    margin: 0;
+    font-size: 1.725rem;
+  }
+
+  .mood-points span {
+    margin: -4% 2% -6% 2%;
+    font-size: 5rem;
+  }
+
+  .heures-ecoutes {
+    grid-area: heures-ecoutes;
+    width: 100%;
+    height: 100%;
+  }
+
+  .des-aleatoire {
+    grid-area: des-aleatoire;
+    width: 100%;
+    height: 75%;
+    background-color: #03f29e;
+    flex-direction: row-reverse;
+  }
+
+  .img-de {
+    margin: 0;
+    background-color: transparent;
+  }
+
+  .hasard-txt {
+    margin: 0;
+    color: black;
+  }
+
+  .img-de img {
+    width: 100%;
+    margin: 0;
+  }
+
+  .meilleures-webradios {
+    grid-area: meilleures-webradios;
+    width: 100%;
+    height: 100%;
+  }
+
+  .div-swipe{
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+  }
+
+  .playlist-decouvrir {
+    grid-area: playlist-decouvrir;
+    width: 100%;
+    height: 100%;
+  }
+
+  .shop {
+    grid-area: shop;
+    width: 100%;
+  }
+
+  .image-best-webradio{
+    display : block;
+  }
+
+  .fond {
+    display: block;
+  }
+
+  .icone {
+    display: block;
+  }
+
+  .liste-icones {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .best-radio{
+    width: 100%;
+  }
+
+
+  .swiper-container {
+  }
+
+  .div-icone4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .div-icone4 img {
+    width: 60%;
+    margin-bottom: 15%;
+  }
+
+  .image-best-webradio,
+  .image-best-webradio2,
+  .image-best-webradio3 {
+    margin-top: 20%;
+    width: 70%;
+  }
+
+  .image-best-webradio3 {
+    margin-bottom: 0;
+  }
+
+  .imgs-meilleures-webradios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .radio-txt {
+    display: none;
+  }
+
+  .playlist-decouvrir {
+    text-align: center;
+  }
+
+  .playlist-decouvrir p {
+    font-size: 1.5rem;
+  }
+
+  .shop > h2 {
+    font-size: 2rem;
+    text-align : center;
+  }
+
+  .bonjour {
+    font-size: 2rem;
+  }
+
+  .pseudo {
+    font-size: 2.5rem;
+  }
+
+  .level {
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  .niveau-chiffres {
+    font-size: 2.5rem;
+  }
+
+  .div-niveau {
+    margin: 15% auto auto auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cercle-profil {
+    position: absolute;
+    width: 140%;
+    top: -30%;
+    left: -20%;
+  }
+
+  .div-swipe{
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+  }
+
+  .div-swipe .swiper-slide{
+    height : auto;
+    margin-left : 33%;
+  }
+
+  .fleche-best-radio{
+    display : none;
+  }
+}
+
+/* version desktop */
+
+@media all and (min-width: 1600px) {
+  .grid-container {
+    margin-top: 3%;
+  }
+
+  .bonjour {
+    font-size: 4rem;
+  }
+
+  .pseudo {
+    font-size: 4.5rem;
+  }
+
+  .level {
+    margin: 0;
+    font-size: 3.5rem;
+  }
+
+  .niveau-chiffres {
+    font-size: 4rem;
+    font-weight: 600;
+  }
+
+  .div-niveau {
+    margin: 10% auto auto auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cercle-profil {
+    position: absolute;
+    width: 200%;
+    top: -23%;
+    left: -50%;
+  }
+
+  .mood-points p {
+    font-size: 3rem;
+  }
+
+  .mood-points span {
+    font-size: 6.5rem;
+    margin: -8% 2% -4% 2%;
+  }
+
+  .img-de {
+    width: 30%;
+  }
+
+  .hasard-txt {
+    font-size: 2.5rem;
+  }
+
+  .temps-ecoute {
+    font-size: 1.725rem;
+    text-align: center;
+  }
+
+  .meilleures-txt {
+    font-size: 2rem;
+  }
+
+  .imgs-meilleures-webradios {
+    width: 100%;
+  }
+
+  .playlist-decouvrir p {
+    font-size: 2rem;
+  }
+
+  .shop > h2 {
+    font-size: 2.5rem;
+  }
+}

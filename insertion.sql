@@ -1,0 +1,1 @@
+-- INSERT INTO Role (nomRole) VALUES ('Admin'),('Modo'),('Uti');

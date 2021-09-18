@@ -1,0 +1,442 @@
+body {
+  background-color: var(--lightgrey);
+}
+
+.profil-radio {
+  margin-left: 4vw;
+  margin-right: 4vw;
+}
+
+.img-container img {
+  clip-path: circle(50%);
+  width: 40vw;
+}
+
+.img-container {
+  position: relative;
+  margin-top: 6vh;
+  display: flex;
+  justify-content: center;
+}
+
+.img-container::after {
+  position: absolute;
+  content: " ";
+  background-color: var(--green);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  top: -10px;
+}
+
+.image-webradio {
+  justify-content: center;
+}
+
+.infos-radio {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.likes {
+  color: var(--green);
+}
+
+.boutonlike.likes {
+  color: var(--green);
+}
+
+
+h2 {
+  margin-top: 0;
+  color: #FFC15E;
+}
+
+.interagir-webradio {
+  margin-top: 3vh;
+  background-color: #FFC15E;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 5vh;
+}
+
+.interagir-webradio input {
+  font-size: 0.6rem;
+  background-color: var(--grey);
+  border-radius: 30px;
+  border-style: none;
+  margin: 8px;
+  width: 35%;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+
+.interagir-webradio button {
+  margin: 10%;
+  background-color: var(--grey);
+  padding: 12px;
+  border-radius: 50%;
+  border-style: none;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: color 0.5s ease-out;
+}
+
+.boutonlike{
+  color: #FFC15E;
+}
+
+.boutonlikeselected{
+  color: var(--green);
+}
+
+.boutonshare{
+  color: #FFC15E;
+}
+
+
+
+.icones{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.desc-webradio {
+  text-align: justify;
+  font-size: 0.9rem;
+}
+
+.formulaireCommentaire {
+  margin: 5%;
+}
+
+.utilisateur {
+  display: flex;
+  justify-content: center;
+}
+
+.unCommentaire {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.div-date-texte {
+  display: flex;
+  flex-direction: column;
+}
+
+.date-commentaire {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.date-commentaire p {
+  font-size: 12px;
+  color: grey;
+  text-align: right;
+}
+
+.texte-commentaire {
+  font-size: 0.9rem;
+  text-align: justify;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  word-break: break-word;
+}
+
+.texte-commentaire p {
+  align-self: center;
+  text-align: justify;
+}
+
+.webradios-preferees {
+  display: none;
+}
+
+.pub {
+  display: none;
+}
+
+footer {
+  font-size: 0.5rem;
+}
+.overlayClosed{
+  display: none;
+}
+
+.publier-commentaire {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: fixed;
+  padding: 25px;
+  width: 50%;
+  top: 25%;
+  left: 25%;
+  background-color: var(--grey);
+  z-index: 2;
+  border: 5px solid var(--green);
+  border-radius: 15px;
+  filter: drop-shadow(10px 10px 10px var(--grey));
+}
+
+.publier-commentaire input {
+  margin-top: 7%;
+  margin-bottom: 7%;
+  font-weight: bold;
+  height: 40px;
+  border-radius: 7px;
+  font-family: "Poppins", sans-serif;
+  border-style: none;
+  font-size: 8px;
+  background-color: var(--green);
+  color: var(--grey);
+  cursor: pointer;
+}
+
+.error {
+  font-size: 0.6rem;
+}
+
+textarea {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  resize: none;
+  border-radius: 3px;
+  background-color: var(--lightgrey);
+  border-style: none;
+  color: white;
+  font-size: 16px;
+  height: 100px;
+}
+
+.div-addcomm {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  vertical-align: baseline;
+  justify-content: center;
+  background-color: var(--green);
+  border-radius: 15px;
+  color: var(--grey);
+  max-width: 500px;
+}
+
+.div-addcomm p {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 10px;
+  font-size: 13px;
+}
+
+.div-addcomm i {
+  color: var(--green);
+  background-color: var(--grey);
+  border-radius: 50px;
+  padding: 10px;
+  margin-left: 2vw;
+}
+
+.profil-name {
+  text-align: center;
+}
+
+.report {
+  position: relative;
+}
+
+.tooltiptext {
+  font-size: 11px;
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 4;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+
+.tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.report:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.textclipboard {
+  position:fixed;
+  bottom:10%;
+  left: 40%;
+  color: var(--green);
+  background-color: var(--grey);
+  padding: 2px;
+  border-radius: 3px;
+  animation: textclipboard 1s ease-out both;
+  z-index: -5;
+}
+
+@keyframes textclipboard{
+  0% {
+    opacity: 1;
+    z-index: 99;
+  }
+
+  50% {
+    opacity: 0.8;
+    z-index: 99;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: 99;
+  }
+}
+
+
+.btn-report {
+  background-color: var(--grey);
+  padding: 10px 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 11px;
+  border-radius: 50px;
+  border: none;
+  transition: color 0.5s ease-out;
+}
+
+.btn-report:hover {
+  color: var(--red);
+}
+
+.profil-name svg{
+  width: 100%;
+}
+
+
+
+@media all and (min-width: 1024px) {
+
+  .presentation-radio{
+    margin-top: 10vh;
+  }
+
+  .image-webradio {
+    align-items: center;
+  }
+
+  .webradios-preferees {
+    display: block;
+    max-height: 720px;
+  }
+
+  .pub {
+    display: block;
+  }
+
+  .infos-radio {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    margin-left: 5%;
+  }
+
+  .interagir-webradio {
+    width: 35%;
+    padding-right: 10px;
+    margin-left: 60%
+  }
+
+  .nom-webradio {
+    margin-left: 5vw;
+  }
+
+  .nom-webradio h1 {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 5rem;
+  }
+
+  .interagir-webradio input {
+    width: 50%;
+    font-size: 1rem;
+  }
+
+  .div-milieu {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    margin-top: 5vh;
+  }
+
+  .webradios-preferees {
+    max-height: 860px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+  }
+
+  .webradios-preferees img {
+    margin: 10px;
+  }
+
+  .top-webradios {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer {
+    font-size: 1rem;
+  }
+
+  .unCommentaire {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+
+  .img-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  .img-container img {
+    width: 20vw;
+  }
+
+  .error{
+    font-size: 0.8rem;
+  }
+
+  .publier-commentaire input{
+    font-weight: bold;
+    font-size: 11px;
+
+  }
+}

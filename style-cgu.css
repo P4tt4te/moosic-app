@@ -1,0 +1,31 @@
+.cgu{
+  background-color: #2E2B45;
+  border-radius: 20px;
+  padding: 5vw;
+}
+
+.cgu p{
+  border-radius: 20px;
+  text-align: justify;
+  text-justify: auto;
+  margin : 0;
+}
+
+.cgu-txt{
+  background-color : #34314F;
+  padding : 5%;
+  border-radius : 20px;
+}
+
+h3{
+  margin-top : 7%;
+}
+
+.cgu-txt p:first-child{
+  text-align : center;
+  margin-bottom : 5%;
+}
+
+p.saut-para{
+  margin-bottom : 3%;
+}
